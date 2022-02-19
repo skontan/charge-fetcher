@@ -7,4 +7,4 @@ const fetchChargeFinder =async () => {
 
 fetchChargeFinder();
 
-setInterval(fetchChargeFinder, 1000 * 5)
+setInterval(fetchChargeFinder, 1000 * 60)
