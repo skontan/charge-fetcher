@@ -1,7 +1,7 @@
 const axios = require("axios");
 const http = require("http");
 
-const hostname = "https://charge-fetcher.onrender.com";
+const hostname = "charge-fetcher.onrender.com";
 const port = 3000;
 
 const server = http.createServer((req: any, res: any) => {
