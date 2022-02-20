@@ -1,18 +1,16 @@
 const axios = require("axios");
-const http = require("http");
 
-const hostname = "charge-fetcher.onrender.com";
-const port = 3000;
+const express = require("express");
+const app = express();
+const port = 3001;
 
-const server = http.createServer((req: any, res: any) => {
+app.get("/", (req: any, res: any) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");
   res.end("Hello World");
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 const fetchChargeFinder = async () => {
   const data = await axios.get("https://api.chargefinder.com/status/556gm2");
